@@ -139,3 +139,19 @@ main {
   text-shadow: 0 0 4px #99c2ff;
 }
 
+footer {
+  margin-top: 60px;
+  padding: 30px;
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  font-size: 0.95rem;
+  box-shadow: 0 -4px 10px rgba(0, 64, 128, 0.4);
+  line-height: 1.6;
+}
+
+footer i {
+  margin-right: 5px;
+  color: #aad4ff;
+}
+
