@@ -3,19 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <title>Técnico em Estética</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #fff0f5, #e6f7ff);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #cc66cc, #66ccff);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    nav {
+      background-color: #cc66cc;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffe6ff;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    main img {
+      width: 80%;
+      max-width: 500px;
+      border-radius: 16px;
+      margin: 20px 0;
+      box-shadow: 0 4px 10px rgba(204, 102, 204, 0.3);
+    }
+
+    main h2 {
+      color: #cc3399;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    main p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin: 15px 0;
+    }
+
+    .voltar-inicio {
+      margin-top: 30px;
+    }
+
+    .voltar-inicio a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #cc66cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(204, 102, 204, 0.4);
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .voltar-inicio a:hover {
+      background-color: #e699ff;
+      transform: scale(1.05);
+      color: #660033;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 30px;
+      background-color: #cc66cc;
+      color: white;
+      text-align: center;
+      font-size: 0.95rem;
+      box-shadow: 0 -4px 10px rgba(204, 102, 204, 0.4);
+      line-height: 1.6;
+    }
+
+    footer i {
+      margin-right: 6px;
+      color: #ffccff;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Técnico em Estética</h1>
   </header>
+
   <nav>
     <ul>
-      <li><a href="index.html">Início</a></li>
+      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
     </ul>
   </nav>
+
   <main>
-    <p>Curso voltado para cuidados com a beleza, bem-estar e saúde estética.</p>
+    <h2>Transformando Beleza em Profissão</h2>
+    <p>O curso Técnico em Estética prepara profissionais para atuarem em clínicas de estética, salões de beleza, spas e centros de bem-estar.</p>
+    <p>Durante o curso, os alunos aprendem técnicas de limpeza de pele, massagem corporal, procedimentos faciais, maquiagem profissional e cuidados estéticos diversos.</p>
+    <img src="et.jpg" alt="Aluna realizando procedimento estético">
+
+    <div class="voltar-inicio">
+      <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar à Página Inicial</a>
+    </div>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Colégio Estadual Barbosa Ferraz. Todos os direitos reservados.</p>
+    <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Exemplo, 123 - Cidade/PR</p>
+    <p><i class="fas fa-envelope"></i> contato@barbosaferraz.edu.br | <i class="fas fa-phone"></i> (44) 99999-0000</p>
+  </footer>
 </body>
 </html>
+
