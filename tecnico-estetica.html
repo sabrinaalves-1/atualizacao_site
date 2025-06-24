@@ -8,45 +8,94 @@
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #fff0f5, #e6f7ff);
-      color: #333;
+      background: linear-gradient(135deg, #e0f0ff, #c0dbff);
+      color: #003366;
     }
 
     header {
-      background: linear-gradient(to right, #cc66cc, #66ccff);
+      background: linear-gradient(to right, #004080, #0074d9);
       color: white;
       text-align: center;
       padding: 40px 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 12px rgba(0, 64, 128, 0.5);
     }
 
     nav {
-      background-color: #cc66cc;
-      padding: 10px 0;
-      text-align: center;
+      background-color: #0059b3;
+      padding: 0;
+      position: relative;
+      box-shadow: 0 3px 8px rgba(0, 90, 179, 0.7);
+      z-index: 99;
     }
 
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     nav ul li {
-      display: inline-block;
-      margin: 0 15px;
+      position: relative;
     }
 
     nav ul li a {
+      display: block;
+      padding: 14px 22px;
       text-decoration: none;
       color: white;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 1rem;
-      transition: color 0.3s;
+      transition: background 0.35s ease, color 0.35s ease;
+      text-shadow: 1px 1px 2px #003366;
+    }
+
+    nav ul li a i {
+      margin-right: 8px;
+      color: #cce6ff;
+      text-shadow: 0 0 6px #80bfff;
     }
 
     nav ul li a:hover {
-      color: #ffe6ff;
+      background-color: #3399ff;
+      color: #002244;
+      text-shadow: none;
+      box-shadow: 0 0 12px #3399ff;
+      border-radius: 6px;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #3399ff;
+      min-width: 220px;
+      z-index: 10;
+      flex-direction: column;
+      box-shadow: 0 6px 14px rgba(0, 102, 204, 0.8);
+      border-radius: 8px;
+    }
+
+    nav ul li:hover .submenu {
+      display: flex;
+    }
+
+    .submenu li a {
+      padding: 14px 18px;
+      font-weight: 600;
+      color: white;
+      text-shadow: 1px 1px 2px #004080;
+      transition: background 0.3s ease;
+    }
+
+    .submenu li a:hover {
+      background-color: #0059b3;
+      color: #cce6ff;
+      box-shadow: 0 0 10px #cce6ff;
+      border-radius: 6px;
     }
 
     main {
@@ -55,7 +104,7 @@
       padding: 30px;
       background: white;
       border-radius: 16px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 16px rgba(0, 102, 204, 0.2);
       text-align: center;
     }
 
@@ -64,13 +113,14 @@
       max-width: 500px;
       border-radius: 16px;
       margin: 20px 0;
-      box-shadow: 0 4px 10px rgba(204, 102, 204, 0.3);
+      box-shadow: 0 4px 10px rgba(0, 102, 204, 0.2);
     }
 
     main h2 {
-      color: #cc3399;
+      color: #004080;
       font-size: 2rem;
       margin-bottom: 10px;
+      text-shadow: 1px 1px 2px #80bfff;
     }
 
     main p {
@@ -86,39 +136,40 @@
     .voltar-inicio a {
       display: inline-block;
       padding: 12px 24px;
-      background-color: #cc66cc;
+      background-color: #0059b3;
       color: white;
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
-      box-shadow: 0 4px 12px rgba(204, 102, 204, 0.4);
+      box-shadow: 0 4px 12px rgba(0, 90, 179, 0.4);
       transition: background 0.3s, transform 0.2s;
     }
 
     .voltar-inicio a:hover {
-      background-color: #e699ff;
+      background-color: #3399ff;
       transform: scale(1.05);
-      color: #660033;
+      color: #002244;
     }
 
     footer {
       margin-top: 60px;
       padding: 30px;
-      background-color: #cc66cc;
+      background-color: #004080;
       color: white;
       text-align: center;
       font-size: 0.95rem;
-      box-shadow: 0 -4px 10px rgba(204, 102, 204, 0.4);
+      box-shadow: 0 -4px 10px rgba(0, 64, 128, 0.4);
       line-height: 1.6;
     }
 
     footer i {
       margin-right: 6px;
-      color: #ffccff;
+      color: #aad4ff;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Técnico em Estética</h1>
   </header>
@@ -126,14 +177,32 @@
   <nav>
     <ul>
       <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="ensino-medio.html"><i class="fas fa-book-open"></i> Ensino Médio</a></li>
+      <li>
+        <a href="#"><i class="fas fa-sun"></i> Manhã ▾</a>
+        <ul class="submenu">
+          <li><a href="tecnico-ds.html">Técnico DS</a></li>
+          <li><a href="formacao-docentes.html">Formação de Docentes</a></li>
+          <li><a href="tecnico-estetica.html">Técnico em Estética</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-moon"></i> Tarde ▾</a>
+        <ul class="submenu">
+          <li><a href="tecnico-enfermagem.html">Técnico em Enfermagem</a></li>
+          <li><a href="tecnico-administracao.html">Técnico em Administração</a></li>
+        </ul>
+      </li>
+      <li><a href="projetos.html"><i class="fas fa-lightbulb"></i> Projetos</a></li>
+      <li><a href="atividades.html"><i class="fas fa-star"></i> Atividades</a></li>
     </ul>
   </nav>
 
   <main>
-    <h2>Transformando Beleza em Profissão</h2>
-    <p>O curso Técnico em Estética prepara profissionais para atuarem em clínicas de estética, salões de beleza, spas e centros de bem-estar.</p>
-    <p>Durante o curso, os alunos aprendem técnicas de limpeza de pele, massagem corporal, procedimentos faciais, maquiagem profissional e cuidados estéticos diversos.</p>
-    <img src="et.jpg" alt="Aluna realizando procedimento estético">
+    <h2>Beleza, Bem-estar e Profissão</h2>
+    <p>O curso Técnico em Estética forma profissionais para atuarem em clínicas, salões, spas e centros de bem-estar.</p>
+    <p>Com foco em cuidados com a pele, procedimentos estéticos, massagens e autoestima, os alunos saem preparados para transformar vidas com técnica, responsabilidade e criatividade.</p>
+    <img src="et.jpg" alt="Procedimento estético no curso de Estética">
 
     <div class="voltar-inicio">
       <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar à Página Inicial</a>
@@ -145,6 +214,8 @@
     <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Exemplo, 123 - Cidade/PR</p>
     <p><i class="fas fa-envelope"></i> contato@barbosaferraz.edu.br | <i class="fas fa-phone"></i> (44) 99999-0000</p>
   </footer>
+
 </body>
 </html>
+
 
