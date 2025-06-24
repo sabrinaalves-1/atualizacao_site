@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>Formação de Docentes - Colégio Barbosa Ferraz</title>
   <style>
-    /* Reset básico */
     * {
       box-sizing: border-box;
     }
@@ -37,6 +36,7 @@
     nav {
       background-color: #0059b3;
       box-shadow: 0 3px 8px rgba(0, 90, 179, 0.7);
+      z-index: 99;
     }
 
     nav ul {
@@ -44,20 +44,21 @@
       margin: 0;
       padding: 0;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
     }
 
     nav ul li {
-      margin: 0;
+      position: relative;
     }
 
     nav ul li a {
       display: block;
-      padding: 14px 30px;
+      padding: 14px 22px;
+      text-decoration: none;
       color: white;
       font-weight: 700;
-      text-decoration: none;
-      font-size: 1.1rem;
+      font-size: 1rem;
       transition: background 0.3s ease;
       text-shadow: 1px 1px 2px #003366;
     }
@@ -67,6 +68,42 @@
       color: #002244;
       border-radius: 6px;
       box-shadow: 0 0 12px #3399ff;
+    }
+
+    nav ul li a i {
+      margin-right: 6px;
+      color: #cce6ff;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #3399ff;
+      min-width: 200px;
+      z-index: 10;
+      flex-direction: column;
+      box-shadow: 0 6px 14px rgba(0, 102, 204, 0.8);
+      border-radius: 8px;
+    }
+
+    nav ul li:hover .submenu {
+      display: flex;
+    }
+
+    .submenu li a {
+      padding: 12px 15px;
+      font-weight: 600;
+      color: white;
+      text-shadow: 1px 1px 2px #004080;
+    }
+
+    .submenu li a:hover {
+      background-color: #0059b3;
+      color: #cce6ff;
+      box-shadow: 0 0 10px #cce6ff;
+      border-radius: 6px;
     }
 
     main {
@@ -79,19 +116,19 @@
       box-shadow: 0 6px 20px rgba(0, 102, 204, 0.15);
     }
 
-    main p {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      margin-bottom: 1.5em;
-      color: #003366;
-      text-shadow: 0 0 4px #99c2ff;
-    }
-
     main h2 {
       font-family: 'Poppins', sans-serif;
       color: #004080;
       margin-bottom: 15px;
       text-shadow: 1px 1px 3px #66a3ff;
+    }
+
+    main p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #003366;
+      text-shadow: 0 0 4px #99c2ff;
+      margin-bottom: 1.5rem;
     }
 
     .img-container {
@@ -111,28 +148,6 @@
       transform: scale(1.05);
     }
 
-    .btn-voltar {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 30px;
-      background-color: #004080;
-      color: white;
-      font-weight: 700;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 0 12px #3399ff;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .btn-voltar:hover {
-      background-color: #3399ff;
-      box-shadow: 0 0 20px #3399ff;
-      color: #002244;
-    }
-
     footer {
       background-color: #004080;
       color: white;
@@ -149,7 +164,6 @@
       color: #aad4ff;
     }
 
-    /* Responsivo */
     @media (max-width: 600px) {
       main {
         padding: 20px;
@@ -166,35 +180,37 @@
       }
     }
   </style>
-   <nav>
-  <ul>
-    <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
-    <li><a href="ensino-medio.html"><i class="fas fa-book-open"></i> Ensino Médio</a></li>
-    <li>
-      <a href="#"><i class="fas fa-sun"></i> Manhã ▾</a>
-      <ul class="submenu">
-        <li><a href="tecnico-ds.html">Técnico DS</a></li>
-        <li><a href="formacao-docentes.html">Formação de Docentes</a></li>
-        <li><a href="tecnico-estetica.html">Técnico em Estética</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#"><i class="fas fa-moon"></i> Tarde ▾</a>
-      <ul class="submenu">
-        <li><a href="tecnico-enfermagem.html">Técnico em Enfermagem</a></li>
-        <li><a href="tecnico-administracao.html">Técnico em Administração</a></li>
-      </ul>
-    </li>
-    <li><a href="projetos.html"><i class="fas fa-lightbulb"></i> Projetos</a></li>
-    <li><a href="atividades.html"><i class="fas fa-star"></i> Atividades</a></li>
-  </ul>
-</nav>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
   <header>
     <h1>Formação de Docentes</h1>
   </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="ensino-medio.html"><i class="fas fa-book-open"></i> Ensino Médio</a></li>
+      <li>
+        <a href="#"><i class="fas fa-sun"></i> Manhã ▾</a>
+        <ul class="submenu">
+          <li><a href="tecnico-ds.html">Técnico DS</a></li>
+          <li><a href="formacao-docentes.html">Formação de Docentes</a></li>
+          <li><a href="tecnico-estetica.html">Técnico em Estética</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-moon"></i> Tarde ▾</a>
+        <ul class="submenu">
+          <li><a href="tecnico-enfermagem.html">Técnico em Enfermagem</a></li>
+          <li><a href="tecnico-administracao.html">Técnico em Administração</a></li>
+        </ul>
+      </li>
+      <li><a href="projetos.html"><i class="fas fa-lightbulb"></i> Projetos</a></li>
+      <li><a href="atividades.html"><i class="fas fa-star"></i> Atividades</a></li>
+    </ul>
+  </nav>
 
   <main>
     <div class="img-container">
@@ -227,16 +243,13 @@
     <p>
       Os profissionais formados encontram oportunidades em escolas públicas e privadas, projetos sociais, educação comunitária e programas de alfabetização.
     </p>
-
-    <a href="index.html" class="btn-voltar">← Voltar à Página Inicial</a>
   </main>
 
   <footer>
     <p>&copy; 2025 Colégio Estadual Barbosa Ferraz. Todos os direitos reservados.</p>
-    <p><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 - Cidade/PR</p>
+    <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Exemplo, 123 - Cidade/PR</p>
     <p><i class="fas fa-envelope"></i> contato@barbosaferraz.edu.br | <i class="fas fa-phone"></i> (44) 99999-0000</p>
   </footer>
 
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
