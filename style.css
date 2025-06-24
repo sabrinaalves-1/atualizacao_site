@@ -123,6 +123,13 @@ main {
   box-shadow: 0 6px 20px rgba(0, 102, 204, 0.15);
   margin-top: 40px;
 }
+.intro-img {
+  display: block;
+  margin: 0 auto 30px auto;
+  max-width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+}
 
 .intro h2 {
   font-size: 2.4rem;
