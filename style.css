@@ -7,7 +7,7 @@ body {
 
 header {
   position: relative;
-  background: url('capa.jpg') no-repeat center center;
+  background: url('fundo.jpg') no-repeat center center;
   background-size: cover;
   color: white;
   padding: 60px 20px;
