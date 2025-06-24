@@ -2,21 +2,93 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Ensino Médio</title>
+  <title>Ensino Médio - Barbosa Ferraz</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    .botao-voltar {
+      display: inline-block;
+      background-color: #004080;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 64, 128, 0.3);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .botao-voltar:hover {
+      background-color: #0066cc;
+      transform: scale(1.05);
+    }
+
+    .intro ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .intro ul li {
+      margin: 10px 0;
+      font-weight: 500;
+      color: #003366;
+    }
+
+    .intro-img {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 30px auto;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0, 102, 204, 0.2);
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Ensino Médio</h1>
+    <div class="logo-container">
+      <img src="logo.jpg" alt="Logo do Colégio Barbosa Ferraz" class="logo">
+      <div class="titulo-site">
+        <h1>Colégio Estadual Barbosa Ferraz</h1>
+        <p class="subtitulo">Cursos Técnicos & Atividades Complementares</p>
+      </div>
+    </div>
   </header>
+
   <nav>
     <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="ensino-medio.html">Ensino Médio</a></li>
+      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="ensino-medio.html"><i class="fas fa-book-open"></i> Ensino Médio</a></li>
+      <li><a href="projetos.html"><i class="fas fa-lightbulb"></i> Projetos</a></li>
+      <li><a href="atividades.html"><i class="fas fa-star"></i> Atividades</a></li>
     </ul>
   </nav>
+
   <main>
-    <p>O Ensino Médio prepara os alunos para os desafios do futuro, com foco em formação cidadã e acadêmica.</p>
+    <section class="intro">
+      <h2>Ensino Médio de Qualidade no Barbosa Ferraz</h2>
+      <p>O Ensino Médio no Colégio Estadual Barbosa Ferraz é pautado em uma formação sólida e integral, com foco na preparação para vestibulares, ENEM, e para a vida em sociedade.</p>
+      <p>Nossos alunos contam com professores experientes, projetos interdisciplinares e atividades que desenvolvem o pensamento crítico e a responsabilidade cidadã.</p>
+      <img src="em.jpg" alt="Estudantes do Ensino Médio" class="intro-img">
+
+      <ul>
+        <li>✔️ Base Nacional Comum Curricular (BNCC)</li>
+        <li>✔️ Projeto de Vida e Itinerários Formativos</li>
+        <li>✔️ Apoio para ENEM e vestibulares</li>
+        <li>✔️ Simulados, feiras, debates e olimpíadas</li>
+      </ul>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="index.html" class="botao-voltar"><i class="fas fa-arrow-left"></i> Voltar à Página Inicial</a>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Colégio Estadual Barbosa Ferraz. Todos os direitos reservados.</p>
+    <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Exemplo, 123 - Cidade/PR</p>
+    <p><i class="fas fa-envelope"></i> contato@barbosaferraz.edu.br | <i class="fas fa-phone"></i> (44) 99999-0000</p>
+  </footer>
 </body>
 </html>
