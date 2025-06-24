@@ -1,21 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Técnico em Desenvolvimento de Sistemas</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #e0f0ff 0%, #c0dbff 100%);
+      color: #003366;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(90deg, #004080, #0074d9);
+      padding: 40px 20px;
+      text-align: center;
+      color: white;
+      text-shadow: 1px 1px 4px #002244;
+      box-shadow: 0 4px 15px rgba(0, 64, 128, 0.6);
+    }
+    header h1 {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2.8rem;
+    }
+    nav {
+      background-color: #0059b3;
+      box-shadow: 0 3px 8px rgba(0, 90, 179, 0.7);
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0;
+    }
+    nav ul li a {
+      display: block;
+      padding: 14px 25px;
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.35s ease;
+      text-shadow: 1px 1px 2px #003366;
+    }
+    nav ul li a:hover {
+      background-color: #3399ff;
+      color: #002244;
+      box-shadow: 0 0 12px #3399ff;
+      border-radius: 6px;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      background: white;
+      margin: 40px auto 60px auto;
+      border-radius: 20px;
+      padding: 30px 40px;
+      box-shadow: 0 6px 20px rgba(0, 102, 204, 0.15);
+      color: #003366;
+    }
+    main p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    main img {
+      max-width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 102, 204, 0.2);
+      margin-bottom: 30px;
+    }
+    .btn-voltar {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 25px;
+      background-color: #004080;
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 64, 128, 0.5);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-voltar:hover {
+      background-color: #0066cc;
+      box-shadow: 0 6px 14px rgba(0, 102, 204, 0.8);
+    }
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.95rem;
+      box-shadow: 0 -4px 10px rgba(0, 64, 128, 0.4);
+      line-height: 1.6;
+      margin-top: auto;
+    }
+    footer i {
+      margin-right: 5px;
+      color: #aad4ff;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Técnico em Desenvolvimento de Sistemas</h1>
   </header>
+
   <nav>
     <ul>
-      <li><a href="index.html">Início</a></li>
+      <li><a href="index.html"><i class="fas fa-home"></i> Voltar ao Início</a></li>
     </ul>
   </nav>
+
   <main>
-    <p>Curso voltado à programação, banco de dados, desenvolvimento web e sistemas computacionais.</p>
+    <img src="ds.jpg" alt="Desenvolvimento de Sistemas" />
+    <p>O curso Técnico em Desenvolvimento de Sistemas é focado em capacitar o estudante nas principais áreas da programação, banco de dados, desenvolvimento web e sistemas computacionais, preparando-o para o mercado de trabalho atual e futuro.</p>
+
+    <p>Durante o curso, o aluno aprenderá linguagens como Java, Python e JavaScript, além de frameworks modernos, criação e gerenciamento de bancos de dados relacionais, desenvolvimento front-end e back-end, e conceitos de arquitetura de software.</p>
+
+    <p>O técnico em desenvolvimento de sistemas pode atuar em empresas de tecnologia, startups, instituições financeiras, ou ainda atuar como profissional autônomo, desenvolvendo soluções personalizadas para clientes diversos.</p>
+
+    <a href="index.html" class="btn-voltar">Voltar para a página inicial</a>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Colégio Estadual Barbosa Ferraz. Todos os direitos reservados.</p>
+    <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Exemplo, 123 - Cidade/PR</p>
+    <p><i class="fas fa-envelope"></i> contato@barbosaferraz.edu.br | <i class="fas fa-phone"></i> (44) 99999-0000</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
