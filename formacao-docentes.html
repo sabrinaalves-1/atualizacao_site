@@ -1,21 +1,224 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Formação de Docentes</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Formação de Docentes - Colégio Barbosa Ferraz</title>
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #e0f0ff 0%, #c0dbff 100%);
+      color: #003366;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(90deg, #004080, #3399ff);
+      padding: 40px 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 15px rgba(0, 64, 128, 0.6);
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.8rem;
+      margin: 0;
+      text-shadow: 2px 2px 8px #002244;
+    }
+
+    nav {
+      background-color: #0059b3;
+      box-shadow: 0 3px 8px rgba(0, 90, 179, 0.7);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 14px 30px;
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+      text-shadow: 1px 1px 2px #003366;
+    }
+
+    nav ul li a:hover {
+      background-color: #3399ff;
+      color: #002244;
+      border-radius: 6px;
+      box-shadow: 0 0 12px #3399ff;
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 102, 204, 0.15);
+    }
+
+    main p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      margin-bottom: 1.5em;
+      color: #003366;
+      text-shadow: 0 0 4px #99c2ff;
+    }
+
+    main h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #004080;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 3px #66a3ff;
+    }
+
+    .img-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .img-container img {
+      max-width: 100%;
+      max-height: 300px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 102, 204, 0.25);
+      transition: transform 0.3s ease;
+    }
+
+    .img-container img:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-voltar {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 30px;
+      background-color: #004080;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 0 12px #3399ff;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-voltar:hover {
+      background-color: #3399ff;
+      box-shadow: 0 0 20px #3399ff;
+      color: #002244;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.95rem;
+      box-shadow: 0 -4px 10px rgba(0, 64, 128, 0.4);
+      line-height: 1.6;
+      margin-top: auto;
+    }
+
+    footer i {
+      margin-right: 5px;
+      color: #aad4ff;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      main {
+        padding: 20px;
+        margin: 20px;
+      }
+
+      nav ul li a {
+        padding: 10px 15px;
+        font-size: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Formação de Docentes</h1>
   </header>
+
   <nav>
     <ul>
-      <li><a href="index.html">Início</a></li>
+      <li><a href="index.html"><i class="fas fa-home"></i> Voltar para Início</a></li>
     </ul>
   </nav>
+
   <main>
-    <p>Curso para preparação de futuros professores da Educação Infantil e anos iniciais do Ensino Fundamental.</p>
+    <div class="img-container">
+      <img src="fd.jpg" alt="Formação de Docentes" />
+    </div>
+
+    <h2>Sobre o Curso</h2>
+    <p>O curso de Formação de Docentes prepara os futuros professores para atuarem na Educação Infantil e nos anos iniciais do Ensino Fundamental, focando no desenvolvimento de competências pedagógicas, didáticas e na prática educativa.</p>
+
+    <h2>Objetivos</h2>
+    <p>
+      - Capacitar profissionais para a educação básica com ênfase em metodologias modernas.<br>
+      - Promover o desenvolvimento de habilidades para gestão de sala de aula.<br>
+      - Incentivar o uso de tecnologias educacionais.<br>
+      - Formar docentes aptos a atuar em ambientes inclusivos e diversos.
+    </p>
+
+    <h2>Conteúdo Programático</h2>
+    <p>
+      O curso inclui disciplinas como:<br>
+      - Psicologia da Educação<br>
+      - Metodologia do Ensino<br>
+      - Planejamento Educacional<br>
+      - Avaliação Pedagógica<br>
+      - Inclusão e Diversidade<br>
+      - Práticas de Ensino
+    </p>
+
+    <h2>Mercado de Trabalho</h2>
+    <p>
+      Os profissionais formados encontram oportunidades em escolas públicas e privadas, projetos sociais, educação comunitária e programas de alfabetização.
+    </p>
+
+    <a href="index.html" class="btn-voltar">← Voltar à Página Inicial</a>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Colégio Estadual Barbosa Ferraz. Todos os direitos reservados.</p>
+    <p><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 - Cidade/PR</p>
+    <p><i class="fas fa-envelope"></i> contato@barbosaferraz.edu.br | <i class="fas fa-phone"></i> (44) 99999-0000</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
