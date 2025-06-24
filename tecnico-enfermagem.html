@@ -22,7 +22,6 @@
 
     nav {
       background-color: #0059b3;
-      padding: 0;
       box-shadow: 0 3px 8px rgba(0, 90, 179, 0.7);
     }
 
@@ -31,21 +30,16 @@
       margin: 0;
       padding: 0;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-    }
-
-    nav ul li {
-      position: relative;
+      flex-wrap: wrap;
     }
 
     nav ul li a {
       display: block;
       padding: 14px 22px;
-      text-decoration: none;
       color: white;
       font-weight: 700;
-      transition: background 0.3s ease;
+      text-decoration: none;
       text-shadow: 1px 1px 2px #003366;
     }
 
@@ -61,10 +55,17 @@
       background-color: white;
       border-radius: 20px;
       box-shadow: 0 6px 20px rgba(0, 102, 204, 0.15);
+      text-align: center;
+    }
+
+    .curso-img {
+      max-width: 90%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0, 64, 128, 0.2);
     }
 
     h1, h2 {
-      text-align: center;
       color: #004080;
       text-shadow: 1px 1px 3px #66a3ff;
     }
@@ -73,42 +74,33 @@
       font-size: 1.1rem;
       line-height: 1.7;
       color: #003366;
-      text-align: center;
     }
 
-    .curso-img {
-      display: block;
-      margin: 20px auto;
-      max-width: 90%;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 64, 128, 0.2);
-    }
-
-    .botao-voltar {
+    .btn-voltar {
       display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
       background-color: #004080;
       color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0, 64, 128, 0.3);
-      transition: background 0.3s ease, transform 0.2s ease;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 64, 128, 0.4);
+      transition: background 0.3s ease;
     }
 
-    .botao-voltar:hover {
+    .btn-voltar:hover {
       background-color: #0066cc;
-      transform: scale(1.05);
     }
- footer {
+
+    footer {
+      margin-top: 60px;
+      padding: 30px;
       background-color: #004080;
       color: white;
-      padding: 30px 20px;
       text-align: center;
       font-size: 0.95rem;
       box-shadow: 0 -4px 10px rgba(0, 64, 128, 0.4);
-      line-height: 1.6;
-      margin-top: auto;
     }
 
     footer i {
@@ -120,42 +112,27 @@
 <body>
 
   <header>
-    <h1>Curso Técnico em Enfermagem</h1>
+    <h1>Técnico em Enfermagem</h1>
   </header>
 
-   <nav>
+  <nav>
     <ul>
       <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
-      <li><a href="ensino-medio.html"><i class="fas fa-book-open"></i> Ensino Médio</a></li>
-      <li>
-        <a href="#"><i class="fas fa-sun"></i> Manhã ▾</a>
-        <ul class="submenu">
-          <li><a href="tecnico-ds.html">Técnico DS</a></li>
-          <li><a href="formacao-docentes.html">Formação de Docentes</a></li>
-          <li><a href="tecnico-estetica.html">Técnico em Estética</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#"><i class="fas fa-moon"></i> Tarde ▾</a>
-        <ul class="submenu">
-          <li><a href="tecnico-enfermagem.html">Técnico em Enfermagem</a></li>
-          <li><a href="tecnico-administracao.html">Técnico em Administração</a></li>
-        </ul>
-      </li>
-      <li><a href="projetos.html"><i class="fas fa-lightbulb"></i> Projetos</a></li>
-      <li><a href="atividades.html"><i class="fas fa-star"></i> Atividades</a></li>
+      <li><a href="ensino-medio.html">Ensino Médio</a></li>
+      <li><a href="tecnico-ds.html">Técnico DS</a></li>
+      <li><a href="formacao-docentes.html">Formação de Docentes</a></li>
+      <li><a href="tecnico-estetica.html">Técnico em Estética</a></li>
+      <li><a href="tecnico-administracao.html">Técnico em Administração</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="atividades.html">Atividades</a></li>
     </ul>
   </nav>
 
   <main>
-    <img src="ef.jpg" alt="Imagem do curso de Enfermagem" class="curso-img">
-    <h2>Cuidados que salvam vidas!</h2>
-    <p>O Curso Técnico em Enfermagem do Colégio Estadual Barbosa Ferraz prepara profissionais para atuar com responsabilidade, empatia e competência na área da saúde, prestando cuidados integrais ao ser humano em todas as fases da vida. O curso é voltado para quem deseja trabalhar diretamente no atendimento e assistência a pacientes em hospitais, clínicas, unidades básicas de saúde e instituições de longa permanência, sempre com foco no bem-estar, na ética e na humanização do cuidado.</p>
-    
-    
-   <div style="text-align: center; margin-top: 40px;">
-        <a href="index.html" class="botao-voltar"><i class="fas fa-arrow-left"></i> Voltar à Página Inicial</a>
-      </div>
+    <img src="enfermagem.jpg" alt="Curso Técnico em Enfermagem" class="curso-img">
+    <h2>Formação para cuidar com responsabilidade</h2>
+    <p>O curso Técnico em Enfermagem capacita alunos para atuarem em hospitais, clínicas e postos de saúde, com foco em ética, empatia e compromisso com o bem-estar do paciente.</p>
+    <a class="btn-voltar" href="index.html">← Voltar à Página Inicial</a>
   </main>
 
   <footer>
@@ -163,6 +140,7 @@
     <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Exemplo, 123 - Cidade/PR</p>
     <p><i class="fas fa-envelope"></i> contato@barbosaferraz.edu.br | <i class="fas fa-phone"></i> (44) 99999-0000</p>
   </footer>
+
 </body>
 </html>
 
