@@ -1,6 +1,17 @@
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #003366;
+  text-shadow: 1px 1px 4px #aad4ff;
+}
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background: linear-gradient(135deg, #e0f0ff 0%, #c0dbff 100%);
   color: #003366;
 }
