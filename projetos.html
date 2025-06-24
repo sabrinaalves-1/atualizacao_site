@@ -1,28 +1,284 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Projetos</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Projetos - Colégio Barbosa Ferraz</title>
+  <style>
+    .botao-voltar {
+      display: inline-block;
+      background-color: #004080;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 64, 128, 0.3);
+      transition: background 0.3s ease, transform 0.2s ease;
+      margin-top: 30px;
+    }
+
+    .botao-voltar:hover {
+      background-color: #0066cc;
+      transform: scale(1.05);
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #e0f0ff 0%, #c0dbff 100%);
+      color: #003366;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(90deg, #004080, #3399ff);
+      padding: 40px 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 15px rgba(0, 64, 128, 0.6);
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.8rem;
+      margin: 0;
+      text-shadow: 2px 2px 8px #002244;
+    }
+
+    nav {
+      background-color: #0059b3;
+      box-shadow: 0 3px 8px rgba(0, 90, 179, 0.7);
+      z-index: 99;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 14px 22px;
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+      text-shadow: 1px 1px 2px #003366;
+    }
+
+    nav ul li a:hover {
+      background-color: #3399ff;
+      color: #002244;
+      border-radius: 6px;
+      box-shadow: 0 0 12px #3399ff;
+    }
+
+    nav ul li a i {
+      margin-right: 6px;
+      color: #cce6ff;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #3399ff;
+      min-width: 200px;
+      z-index: 10;
+      flex-direction: column;
+      box-shadow: 0 6px 14px rgba(0, 102, 204, 0.8);
+      border-radius: 8px;
+    }
+
+    nav ul li:hover .submenu {
+      display: flex;
+    }
+
+    .submenu li a {
+      padding: 12px 15px;
+      font-weight: 600;
+      color: white;
+      text-shadow: 1px 1px 2px #004080;
+    }
+
+    .submenu li a:hover {
+      background-color: #0059b3;
+      color: #cce6ff;
+      box-shadow: 0 0 10px #cce6ff;
+      border-radius: 6px;
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 102, 204, 0.15);
+    }
+
+    main h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #004080;
+      margin-bottom: 25px;
+      text-shadow: 1px 1px 3px #66a3ff;
+      text-align: center;
+    }
+
+    .projeto {
+      margin-bottom: 30px;
+    }
+
+    .projeto img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 102, 204, 0.25);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .projeto img:hover {
+      transform: scale(1.05);
+    }
+
+    .projeto h3 {
+      margin: 12px 0 8px;
+      color: #0059b3;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.95rem;
+      box-shadow: 0 -4px 10px rgba(0, 64, 128, 0.4);
+      line-height: 1.6;
+      margin-top: auto;
+    }
+
+    footer i {
+      margin-right: 5px;
+      color: #aad4ff;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 20px;
+        margin: 20px;
+      }
+
+      nav ul li a {
+        padding: 10px 15px;
+        font-size: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+
   <header>
-    <h1>Projetos</h1>
+    <h1>Projetos do Colégio Barbosa Ferraz</h1>
   </header>
+
   <nav>
     <ul>
-      <li><a href="index.html">Início</a></li>
+      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="ensino-medio.html"><i class="fas fa-book-open"></i> Ensino Médio</a></li>
+      <li>
+        <a href="#"><i class="fas fa-sun"></i> Manhã ▾</a>
+        <ul class="submenu">
+          <li><a href="tecnico-ds.html">Técnico DS</a></li>
+          <li><a href="formacao-docentes.html">Formação de Docentes</a></li>
+          <li><a href="tecnico-estetica.html">Técnico em Estética</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-moon"></i> Tarde ▾</a>
+        <ul class="submenu">
+          <li><a href="tecnico-enfermagem.html">Técnico em Enfermagem</a></li>
+          <li><a href="tecnico-administracao.html">Técnico em Administração</a></li>
+        </ul>
+      </li>
+      <li><a href="projetos.html"><i class="fas fa-lightbulb"></i> Projetos</a></li>
+      <li><a href="atividades.html"><i class="fas fa-star"></i> Atividades</a></li>
     </ul>
   </nav>
+
   <main>
-    <ul>
-      <li>Robótica</li>
-      <li>Altas Habilidades</li>
-      <li>Libras</li>
-      <li>Treino de Basquete</li>
-      <li>Vôlei</li>
-      <li>Futsal</li>
-    </ul>
+    <h2>Nossos Projetos</h2>
+
+    <div class="projeto">
+      <img src="rb.jpg" alt="Projeto Robótica" />
+      <h3>Robótica</h3>
+      <p>Exploração da tecnologia e programação por meio de construção e competição de robôs.</p>
+    </div>
+
+    <div class="projeto">
+      <img src="ah.jpg" alt="Projeto Altas Habilidades" />
+      <h3>Altas Habilidades</h3>
+      <p>Atividades especiais para alunos com talentos excepcionais, desenvolvendo suas capacidades.</p>
+    </div>
+
+    <div class="projeto">
+      <img src="lb.jpg" alt="Projeto Libras" />
+      <h3>Libras</h3>
+      <p>Incentivo ao aprendizado da Língua Brasileira de Sinais para inclusão e comunicação acessível.</p>
+    </div>
+
+    <div class="projeto">
+      <img src="bt.jpg" alt="Treino de Basquete" />
+      <h3>Treino de Basquete</h3>
+      <p>Treinamento e desenvolvimento de habilidades para a prática do basquete.</p>
+    </div>
+
+    <div class="projeto">
+      <img src="vi.jpg" alt="Treino de Vôlei" />
+      <h3>Vôlei</h3>
+      <p>Projeto esportivo focado em treino e competições de vôlei.</p>
+    </div>
+
+    <div class="projeto">
+      <img src="fs.jpg" alt="Treino de Futsal" />
+      <h3>Futsal</h3>
+      <p>Desenvolvimento técnico e tático para jogadores de futsal.</p>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="index.html" class="botao-voltar"><i class="fas fa-arrow-left"></i> Voltar à Página Inicial</a>
+    </div>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Colégio Estadual Barbosa Ferraz. Todos os direitos reservados.</p>
+    <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Exemplo, 123 - Cidade/PR</p>
+    <p><i class="fas fa-envelope"></i> contato@barbosaferraz.edu.br | <i class="fas fa-phone"></i> (44) 99999-0000</p>
+  </footer>
+
 </body>
 </html>
