@@ -6,21 +6,10 @@ body {
 }
 
 header {
-  position: relative;
-  background: url('fundo.jpg') no-repeat center center;
-  background-size: cover;
+  background: linear-gradient(to right, #004080, #0074d9);
   color: white;
-  padding: 60px 20px;
+  padding: 40px 20px;
   box-shadow: 0 4px 15px rgba(0, 64, 128, 0.6);
-  overflow: hidden;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 64, 0.5);
-  z-index: 0;
 }
 
 .logo-container {
@@ -30,8 +19,6 @@ header::before {
   flex-wrap: wrap;
   justify-content: center;
   text-align: left;
-  position: relative;
-  z-index: 1;
 }
 
 .logo {
@@ -167,4 +154,3 @@ footer i {
   margin-right: 5px;
   color: #aad4ff;
 }
-
