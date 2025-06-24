@@ -30,20 +30,23 @@
     nav {
       background-color: #0059b3;
       box-shadow: 0 3px 8px rgba(0, 90, 179, 0.7);
+      z-index: 99;
     }
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
     }
     nav ul li {
+      position: relative;
       margin: 0;
     }
     nav ul li a {
       display: block;
-      padding: 14px 25px;
+      padding: 14px 22px;
       text-decoration: none;
       color: white;
       font-weight: 700;
@@ -51,10 +54,43 @@
       transition: background 0.35s ease;
       text-shadow: 1px 1px 2px #003366;
     }
+    nav ul li a i {
+      margin-right: 8px;
+      color: #cce6ff;
+      text-shadow: 0 0 6px #80bfff;
+    }
     nav ul li a:hover {
       background-color: #3399ff;
       color: #002244;
       box-shadow: 0 0 12px #3399ff;
+      border-radius: 6px;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #3399ff;
+      min-width: 220px;
+      z-index: 10;
+      flex-direction: column;
+      box-shadow: 0 6px 14px rgba(0, 102, 204, 0.8);
+      border-radius: 8px;
+    }
+    nav ul li:hover .submenu {
+      display: flex;
+    }
+    .submenu li a {
+      padding: 14px 18px;
+      font-weight: 600;
+      color: white;
+      text-shadow: 1px 1px 2px #004080;
+      transition: background 0.3s ease;
+    }
+    .submenu li a:hover {
+      background-color: #0059b3;
+      color: #cce6ff;
+      box-shadow: 0 0 10px #cce6ff;
       border-radius: 6px;
     }
     main {
@@ -78,22 +114,6 @@
       box-shadow: 0 8px 24px rgba(0, 102, 204, 0.2);
       margin-bottom: 30px;
     }
-    .btn-voltar {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 25px;
-      background-color: #004080;
-      color: white;
-      font-weight: 700;
-      text-decoration: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 64, 128, 0.5);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .btn-voltar:hover {
-      background-color: #0066cc;
-      box-shadow: 0 6px 14px rgba(0, 102, 204, 0.8);
-    }
     footer {
       background-color: #004080;
       color: white;
@@ -109,6 +129,7 @@
       color: #aad4ff;
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <header>
@@ -117,7 +138,25 @@
 
   <nav>
     <ul>
-      <li><a href="index.html"><i class="fas fa-home"></i> Voltar ao Início</a></li>
+      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+      <li>
+        <a href="#"><i class="fas fa-sun"></i> Manhã ▾</a>
+        <ul class="submenu">
+          <li><a href="tecnico-ds.html">Técnico DS</a></li>
+          <li><a href="formacao-docentes.html">Formação de Docentes</a></li>
+          <li><a href="tecnico-estetica.html">Técnico em Estética</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-moon"></i> Tarde ▾</a>
+        <ul class="submenu">
+          <li><a href="tecnico-enfermagem.html">Técnico em Enfermagem</a></li>
+          <li><a href="tecnico-administracao.html">Técnico em Administração</a></li>
+        </ul>
+      </li>
+      <li><a href="ensino-medio.html"><i class="fas fa-book-open"></i> Ensino Médio</a></li>
+      <li><a href="projetos.html"><i class="fas fa-lightbulb"></i> Projetos</a></li>
+      <li><a href="atividades.html"><i class="fas fa-star"></i> Atividades</a></li>
     </ul>
   </nav>
 
@@ -128,8 +167,6 @@
     <p>Durante o curso, o aluno aprenderá linguagens como Java, Python e JavaScript, além de frameworks modernos, criação e gerenciamento de bancos de dados relacionais, desenvolvimento front-end e back-end, e conceitos de arquitetura de software.</p>
 
     <p>O técnico em desenvolvimento de sistemas pode atuar em empresas de tecnologia, startups, instituições financeiras, ou ainda atuar como profissional autônomo, desenvolvendo soluções personalizadas para clientes diversos.</p>
-
-    <a href="index.html" class="btn-voltar">Voltar para a página inicial</a>
   </main>
 
   <footer>
@@ -138,6 +175,5 @@
     <p><i class="fas fa-envelope"></i> contato@barbosaferraz.edu.br | <i class="fas fa-phone"></i> (44) 99999-0000</p>
   </footer>
 
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
