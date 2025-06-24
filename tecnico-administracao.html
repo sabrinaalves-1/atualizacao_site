@@ -1,21 +1,259 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Técnico em Administração</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Técnico em Administração - Colégio Barbosa Ferraz</title>
+  <style>
+      .botao-voltar {
+      display: inline-block;
+      background-color: #004080;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 64, 128, 0.3);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .botao-voltar:hover {
+      background-color: #0066cc;
+      transform: scale(1.05);
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #e0f0ff 0%, #c0dbff 100%);
+      color: #003366;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(90deg, #004080, #3399ff);
+      padding: 40px 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 15px rgba(0, 64, 128, 0.6);
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.8rem;
+      margin: 0;
+      text-shadow: 2px 2px 8px #002244;
+    }
+
+    nav {
+      background-color: #0059b3;
+      box-shadow: 0 3px 8px rgba(0, 90, 179, 0.7);
+      z-index: 99;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 14px 22px;
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+      text-shadow: 1px 1px 2px #003366;
+    }
+
+    nav ul li a:hover {
+      background-color: #3399ff;
+      color: #002244;
+      border-radius: 6px;
+      box-shadow: 0 0 12px #3399ff;
+    }
+
+    nav ul li a i {
+      margin-right: 6px;
+      color: #cce6ff;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #3399ff;
+      min-width: 200px;
+      z-index: 10;
+      flex-direction: column;
+      box-shadow: 0 6px 14px rgba(0, 102, 204, 0.8);
+      border-radius: 8px;
+    }
+
+    nav ul li:hover .submenu {
+      display: flex;
+    }
+
+    .submenu li a {
+      padding: 12px 15px;
+      font-weight: 600;
+      color: white;
+      text-shadow: 1px 1px 2px #004080;
+    }
+
+    .submenu li a:hover {
+      background-color: #0059b3;
+      color: #cce6ff;
+      box-shadow: 0 0 10px #cce6ff;
+      border-radius: 6px;
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 102, 204, 0.15);
+    }
+
+    main h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #004080;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 3px #66a3ff;
+    }
+
+    main p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #003366;
+      text-shadow: 0 0 4px #99c2ff;
+      margin-bottom: 1.5rem;
+    }
+
+    .img-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .img-container img {
+      max-width: 100%;
+      max-height: 300px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 102, 204, 0.25);
+      transition: transform 0.3s ease;
+    }
+
+    .img-container img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.95rem;
+      box-shadow: 0 -4px 10px rgba(0, 64, 128, 0.4);
+      line-height: 1.6;
+      margin-top: auto;
+    }
+
+    footer i {
+      margin-right: 5px;
+      color: #aad4ff;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 20px;
+        margin: 20px;
+      }
+
+      nav ul li a {
+        padding: 10px 15px;
+        font-size: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
   <header>
     <h1>Técnico em Administração</h1>
   </header>
+
   <nav>
     <ul>
-      <li><a href="index.html">Início</a></li>
+      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="ensino-medio.html"><i class="fas fa-book-open"></i> Ensino Médio</a></li>
+      <li>
+        <a href="#"><i class="fas fa-sun"></i> Manhã ▾</a>
+        <ul class="submenu">
+          <li><a href="tecnico-ds.html">Técnico DS</a></li>
+          <li><a href="formacao-docentes.html">Formação de Docentes</a></li>
+          <li><a href="tecnico-estetica.html">Técnico em Estética</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-moon"></i> Tarde ▾</a>
+        <ul class="submenu">
+          <li><a href="tecnico-enfermagem.html">Técnico em Enfermagem</a></li>
+          <li><a href="tecnico-administracao.html">Técnico em Administração</a></li>
+        </ul>
+      </li>
+      <li><a href="projetos.html"><i class="fas fa-lightbulb"></i> Projetos</a></li>
+      <li><a href="atividades.html"><i class="fas fa-star"></i> Atividades</a></li>
     </ul>
   </nav>
+
   <main>
-    <p>Curso voltado à gestão de empresas, organização de processos e práticas administrativas.</p>
+    <div class="img-container">
+      <img src="adm.jpg" alt="Técnico em Administração" />
+    </div>
+
+    <p>O curso de Técnico em Administração oferece uma formação sólida para atuar nas áreas de gestão, finanças, recursos humanos e empreendedorismo.</p>
+    <p>
+      - Prepara o aluno para organizar, planejar e executar atividades administrativas.<br>
+      - Desenvolve habilidades em liderança, trabalho em equipe e comunicação organizacional.<br>
+      - Introduz ferramentas de controle financeiro e planejamento estratégico.<br>
+      - Estimula o perfil empreendedor e a inovação nos negócios.
+    </p>
+    <p>
+      Os técnicos podem atuar em empresas públicas e privadas, escritórios, escolas, comércios, startups e até abrir seu próprio negócio.
+    </p>
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="index.html" class="botao-voltar"><i class="fas fa-arrow-left"></i> Voltar à Página Inicial</a>
+    </div>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Colégio Estadual Barbosa Ferraz. Todos os direitos reservados.</p>
+    <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Exemplo, 123 - Cidade/PR</p>
+    <p><i class="fas fa-envelope"></i> contato@barbosaferraz.edu.br | <i class="fas fa-phone"></i> (44) 99999-0000</p>
+  </footer>
+
 </body>
 </html>
+
