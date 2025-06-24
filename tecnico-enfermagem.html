@@ -3,19 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <title>Técnico em Enfermagem</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #e0f0ff 0%, #c0dbff 100%);
+      color: #003366;
+    }
+
+    header {
+      background: linear-gradient(to right, #004080, #0074d9);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 64, 128, 0.6);
+    }
+
+    nav {
+      background-color: #0059b3;
+      padding: 0;
+      box-shadow: 0 3px 8px rgba(0, 90, 179, 0.7);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 14px 22px;
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      transition: background 0.3s ease;
+      text-shadow: 1px 1px 2px #003366;
+    }
+
+    nav ul li a:hover {
+      background-color: #3399ff;
+      border-radius: 6px;
+    }
+
+    main {
+      padding: 40px 30px;
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 102, 204, 0.15);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #004080;
+      text-shadow: 1px 1px 3px #66a3ff;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #003366;
+      text-align: center;
+    }
+
+    .curso-img {
+      display: block;
+      margin: 20px auto;
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 64, 128, 0.2);
+    }
+
+    .btn-voltar {
+      display: block;
+      width: fit-content;
+      margin: 30px auto 10px;
+      padding: 10px 20px;
+      background-color: #004080;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 64, 128, 0.4);
+      transition: background 0.3s ease;
+    }
+
+    .btn-voltar:hover {
+      background-color: #0066cc;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 30px;
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      font-size: 0.95rem;
+      box-shadow: 0 -4px 10px rgba(0, 64, 128, 0.4);
+      line-height: 1.6;
+    }
+
+    footer i {
+      margin-right: 5px;
+      color: #aad4ff;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>Técnico em Enfermagem</h1>
+    <h1>Curso Técnico em Enfermagem</h1>
   </header>
+
   <nav>
     <ul>
-      <li><a href="index.html">Início</a></li>
+      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="ensino-medio.html">Ensino Médio</a></li>
+      <li><a href="tecnico-ds.html">Técnico DS</a></li>
+      <li><a href="formacao-docentes.html">Formação de Docentes</a></li>
+      <li><a href="tecnico-estetica.html">Técnico em Estética</a></li>
+      <li><a href="tecnico-administracao.html">Técnico em Administração</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="atividades.html">Atividades</a></li>
     </ul>
   </nav>
+
   <main>
-    <p>Curso voltado para formação de profissionais da área da saúde com foco em cuidados de enfermagem.</p>
+    <img src="ef.jpg" alt="Imagem do curso de Enfermagem" class="curso-img">
+    <h2>Cuidados que salvam vidas!</h2>
+    <p>O curso forma profissionais capacitados para atuar na área da saúde com responsabilidade e empatia, cuidando de pacientes em hospitais, clínicas e unidades de saúde.</p>
+    <a class="btn-voltar" href="index.html">← Voltar à Página Inicial</a>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Colégio Estadual Barbosa Ferraz. Todos os direitos reservados.</p>
+    <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Exemplo, 123 - Cidade/PR</p>
+    <p><i class="fas fa-envelope"></i> contato@barbosaferraz.edu.br | <i class="fas fa-phone"></i> (44) 99999-0000</p>
+  </footer>
+
 </body>
 </html>
+
