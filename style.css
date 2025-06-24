@@ -123,22 +123,19 @@ main {
   box-shadow: 0 6px 20px rgba(0, 102, 204, 0.15);
   margin-top: 40px;
 }
+
 .intro-img {
   display: block;
   margin: 0 auto 40px auto;
-  max-width: 300px;
-  opacity: 0.85;
-  mix-blend-mode: lighten;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  max-width: 320px;
+  border-radius: 0;
+  box-shadow: 0 10px 30px rgba(0, 102, 204, 0.25);
+  transition: transform 0.3s ease;
 }
 
 .intro-img:hover {
   transform: scale(1.05);
-  opacity: 1;
 }
-
 
 .intro h2 {
   font-size: 2.4rem;
