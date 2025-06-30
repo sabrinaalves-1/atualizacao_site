@@ -36,15 +36,26 @@ header {
   flex-wrap: wrap;
   gap: 30px;
   text-align: center;
+  background-color: #0059b3; /* Mesmo azul do menu para a área da logo */
+  padding: 10px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 90, 179, 0.7); /* sombra suave ao redor */
 }
 
 .logo {
   width: 120px;
   height: auto;
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-  background-color: transparent;
-  object-fit: contain;
+  border-radius: 12px;
+  background-color: #004080; /* Fundo sólido parecido com o menu, só um pouco mais escuro para contraste */
+  box-shadow: 0 0 15px 3px rgba(102, 163, 255, 0.7); /* brilho azul suave em volta da logo */
+  padding: 8px; /* espaço interno para destacar a logo do fundo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px 6px rgba(102, 163, 255, 0.9); /* efeito glow maior ao passar o mouse */
 }
 
 .titulo-site {
