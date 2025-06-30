@@ -202,20 +202,24 @@ main {
 /* Rodapé */
 
 footer {
-  background-color: #004080 !important; /* Azul escuro original */
-  color: white !important;              /* Texto branco */
-  padding: 30px 20px !important;
-  text-align: center !important;        /* Centraliza texto */
-  font-size: 0.95rem !important;
-  box-shadow: 0 -4px 10px rgba(0, 64, 128, 0.4) !important;
-  line-height: 1.6 !important;
-  margin-top: 60px !important;          /* Espaço acima do footer */
-  font-family: 'Quicksand', sans-serif !important;
-  border: none !important;
+  background-color: #004080 !important;
+  color: white !important;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.95rem;
+  box-shadow: 0 -4px 10px rgba(0, 64, 128, 0.4);
+  line-height: 1.6;
+  margin-top: 60px;
+  font-family: 'Quicksand', sans-serif;
+  border: none;
+}
+
+footer p {
+  color: white !important;
 }
 
 footer i {
-  margin-right: 5px !important;
-  color: #aad4ff !important; /* Azul claro para ícones */
+  margin-right: 5px;
+  color: #aad4ff !important;
 }
 
