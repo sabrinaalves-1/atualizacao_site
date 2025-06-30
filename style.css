@@ -1,24 +1,29 @@
 /* Tipografia geral */
 .intro-conteudo {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
-  padding: 20px;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 20px;
 }
 
 .texto-intro {
-  flex: 1 1 400px;
+  flex: 1 1 55%;
   font-size: 1.1em;
   color: #333;
 }
 
+.imagem-intro {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
 .imagem-intro img {
-  max-width: 400px;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Fredoka+One&display=swap');
