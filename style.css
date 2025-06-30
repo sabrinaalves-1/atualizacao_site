@@ -52,7 +52,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Texto alinhado à esquerda */
-  text-align: left;
+  text-align: center;
   flex: 1;
 }
 
