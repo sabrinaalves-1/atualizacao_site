@@ -197,24 +197,18 @@ main {
 }
 
 /* Rodapé */
-footer {
-  margin-top: 60px;
-  padding: 30px;
-  background-color: #004080; /* COR ORIGINAL */
-  color: white;              /* TEXTO BRANCO ORIGINAL */
-  text-align: center;
-  font-size: 0.95rem;
-  font-family: 'Quicksand', sans-serif;
-  box-shadow: 0 -4px 10px rgba(0, 64, 128, 0.4);
-  line-height: 1.6;
-}
+ footer {
+      background-color: #004080;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.95rem;
+      box-shadow: 0 -4px 10px rgba(0, 64, 128, 0.4);
+      line-height: 1.6;
+      margin-top: auto;
+    }
 
-footer p {
-  margin: 8px 0;
-}
-
-footer i {
-  margin-right: 5px;
-  color: #aad4ff; /* Azul clarinho dos ícones */
-}
-
+    footer i {
+      margin-right: 5px;
+      color: #aad4ff;
+    }
