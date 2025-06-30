@@ -1,32 +1,28 @@
 /* Tipografia geral */
-.intro-conteudo {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center; /* Centraliza tudo no centro da section */
-  gap: 30px;
-  padding: 20px;
+.intro {
+  text-align: center;
+  padding: 40px 20px;
 }
 
+.intro h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
 
-.texto-intro {
-  flex: 1 1 55%;
+.intro p {
   font-size: 1.1em;
+  max-width: 800px;
+  margin: 0 auto 30px;
   color: #333;
+  line-height: 1.6;
 }
 
-.imagem-intro {
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center;     /* Centraliza verticalmente */
-  flex: 1 1 300px;          /* Garante que ocupe um espaço proporcional */
-}
-
-.imagem-intro img {
-  max-width: 100%;
-  width: 300px;
+.imagem-centralizada img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Fredoka+One&display=swap');
