@@ -205,7 +205,23 @@ main {
   margin-top: 10px;
   font-family: 'Comfortaa', cursive;
 }
+ .botao-navegacao {
+  display: inline-block;
+  background-color: #004080;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 10px rgba(0, 64, 128, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
 
+.botao-navegacao:hover {
+  background-color: #0066cc;
+  transform: scale(1.1);
+}
 /* Rodapé */
 
 footer {
