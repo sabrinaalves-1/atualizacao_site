@@ -32,31 +32,30 @@ header {
 .logo-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  text-align: center;
+  justify-content: flex-start; /* Alinha a logo e o título começando da esquerda */
+  gap: 15px; /* Espaçamento menor entre logo e título */
+  flex-wrap: nowrap; /* Evita quebra de linha */
+  text-align: left;
+  padding-left: 20px; /* Espaço da esquerda, opcional */
 }
+
 .logo {
-  width: 120px;
+  width: 160px; /* Aumentei o tamanho da logo */
   height: auto;
-  border-radius: 0; /* Se quiser sem borda arredondada */
-  box-shadow: none; /* Remove o brilho/sombra */
+  border-radius: 0; /* Pode manter ou ajustar */
+  box-shadow: none;
   background-color: transparent;
   object-fit: contain;
-}
-.logo:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px 6px rgba(102, 163, 255, 0.9); /* efeito glow maior ao passar o mouse */
 }
 
 .titulo-site {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start; /* Texto alinhado à esquerda */
+  text-align: left;
   flex: 1;
 }
+
 
 .titulo-site h1 {
   font-family: 'Poppins', sans-serif;
