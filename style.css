@@ -28,21 +28,20 @@ header {
   padding: 40px 20px;
   box-shadow: 0 4px 15px rgba(0, 64, 128, 0.6);
 }
-
 .logo-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Alinha a logo e o título começando da esquerda */
-  gap: 15px; /* Espaçamento menor entre logo e título */
-  flex-wrap: nowrap; /* Evita quebra de linha */
-  text-align: left;
-  padding-left: 20px; /* Espaço da esquerda, opcional */
+  justify-content: center; /* centraliza logo + texto juntos */
+  gap: 15px;               /* distância menor entre eles */
+  flex-wrap: nowrap;       /* sem quebra de linha */
+  text-align: center;
+  padding: 0 20px;         /* espaçamento nas laterais */
 }
 
 .logo {
-  width: 160px; /* Aumentei o tamanho da logo */
+  width: 160px;            /* logo maior */
   height: auto;
-  border-radius: 0; /* Pode manter ou ajustar */
+  border-radius: 0;
   box-shadow: none;
   background-color: transparent;
   object-fit: contain;
@@ -51,7 +50,7 @@ header {
 .titulo-site {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Texto alinhado à esquerda */
+  align-items: center;     /* centraliza o texto */
   text-align: center;
   flex: 1;
 }
