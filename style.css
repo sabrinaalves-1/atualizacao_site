@@ -199,22 +199,22 @@ main {
 /* Rodapé */
 footer {
   margin-top: 60px;
-  padding: 30px 20px;
-  background-color: #004080;
-  color: white;
+  padding: 30px;
+  background-color: #004080; /* COR ORIGINAL */
+  color: white;              /* TEXTO BRANCO ORIGINAL */
   text-align: center;
   font-size: 0.95rem;
   font-family: 'Quicksand', sans-serif;
   box-shadow: 0 -4px 10px rgba(0, 64, 128, 0.4);
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 footer p {
   margin: 8px 0;
-  text-shadow: 1px 1px 2px #002244;
 }
 
 footer i {
-  margin-right: 6px;
-  color: #aad4ff;
+  margin-right: 5px;
+  color: #aad4ff; /* Azul clarinho dos ícones */
 }
+
