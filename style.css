@@ -1,5 +1,8 @@
 /* Tipografia geral */
 body {
+  background-color: lime !important;
+}
+body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
   background: linear-gradient(135deg, #e0f0ff 0%, #c0dbff 100%);
@@ -197,18 +200,13 @@ main {
 }
 
 /* Rodapé */
- footer {
-      background-color: #004080;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 0.95rem;
-      box-shadow: 0 -4px 10px rgba(0, 64, 128, 0.4);
-      line-height: 1.6;
-      margin-top: auto;
-    }
 
-    footer i {
-      margin-right: 5px;
-      color: #aad4ff;
-    }
+footer {
+  background-color: red !important;
+  color: yellow !important;
+  font-size: 1.5rem !important;
+  text-align: left !important;
+  padding: 50px !important;
+  border: 5px solid yellow !important;
+}
+
