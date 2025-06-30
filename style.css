@@ -1,21 +1,25 @@
 /* Tipografia geral */
 
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Fredoka+One&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Comfortaa', cursive; /* fonte fofinha para textos */
   background: linear-gradient(135deg, #e0f0ff 0%, #c0dbff 100%);
   color: #003366;
 }
 
 h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Fredoka One', cursive; /* fonte divertida e marcante para títulos */
   font-weight: 700;
   color: #003366;
   text-shadow: 1px 1px 4px #aad4ff;
+  margin-top: 0;
+  margin-bottom: 0.5em;
 }
 
 p {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Comfortaa', cursive;
   font-size: 1.15rem;
   line-height: 1.9;
   color: #002244;
@@ -55,9 +59,8 @@ header {
   flex: 1;
 }
 
-
 .titulo-site h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Fredoka One', cursive;
   font-size: 3rem;
   font-weight: 700;
   color: #ffffff;
@@ -66,7 +69,7 @@ header {
 }
 
 .subtitulo {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Comfortaa', cursive;
   font-size: 1.4rem;
   color: #e0f0ff;
   text-shadow: 1px 1px 4px #001a33;
@@ -105,6 +108,7 @@ nav ul li a {
   font-size: 1rem;
   transition: background 0.35s ease, color 0.35s ease;
   text-shadow: 1px 1px 2px #003366;
+  font-family: 'Comfortaa', cursive;
 }
 
 nav ul li a i {
@@ -133,6 +137,7 @@ nav ul li a:hover {
   flex-direction: column;
   box-shadow: 0 6px 14px rgba(0, 102, 204, 0.8);
   border-radius: 8px;
+  font-family: 'Comfortaa', cursive;
 }
 
 nav ul li:hover .submenu {
@@ -162,6 +167,7 @@ main {
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 102, 204, 0.15);
+  font-family: 'Comfortaa', cursive;
 }
 
 /* Seção de introdução */
@@ -187,6 +193,7 @@ main {
   color: #004080;
   margin-bottom: 15px;
   text-shadow: 1px 1px 3px #66a3ff;
+  font-family: 'Fredoka One', cursive;
 }
 
 .intro p {
@@ -196,6 +203,7 @@ main {
   text-shadow: 0 0 6px #cce6ff;
   line-height: 1.8;
   margin-top: 10px;
+  font-family: 'Comfortaa', cursive;
 }
 
 /* Rodapé */
@@ -209,7 +217,7 @@ footer {
   box-shadow: 0 -4px 10px rgba(0, 64, 128, 0.4);
   line-height: 1.6;
   margin-top: 60px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Comfortaa', cursive;
   border: none;
 }
 
@@ -221,4 +229,5 @@ footer i {
   margin-right: 5px;
   color: #aad4ff !important;
 }
+
 
